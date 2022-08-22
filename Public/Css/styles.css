@@ -10,13 +10,13 @@ body{
     justify-content: center;
     width: 100%;
     margin: 0;
-    height: 8000px;
+    height: 750px;
 }
 
 .lateral1{
     line-height: 300px;
     width: 100%;
-    margin: 50px;
+    margin-left: 80px;
 }
 
 .lateral1 h1{
@@ -34,12 +34,11 @@ form{
 form img{
     width: 100%;
     height: 20px;
-
     border-radius: 2px;
     }
 
 .lateral2{
-    margin-right: 100px;
+    margin-right: 130px;
     background-color: rgba(238, 245, 240, 0.993);
     border-radius: 15px;
     padding: 5px;
@@ -71,6 +70,10 @@ button{
     margin-top:15px;
     }
 
+    a{
+        color: #359b9b;
+    }
+
     button a{
         color: white;    
         text-transform: capitalize;
@@ -96,7 +99,16 @@ a{
       display: none;
     }
     .lateral2{
+        width: 380px;
         margin-left: 50px;
         margin-right: 50px;
+    }
+
+    img{
+        width: 380px;
+    }
+
+    .terminos{
+        margin: -60px;
     }
   }
