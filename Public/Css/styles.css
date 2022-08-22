@@ -34,7 +34,7 @@ form{
 form img{
     width: 100%;
     height: 20px;
-    border-radius: 2px;
+    border-radius: 6px;
     }
 
 .lateral2{
@@ -60,7 +60,12 @@ input{
     margin-bottom: 2px;
 }
 
-button{
+input.submit{
+    color: white;    
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
     background-color: #F58634;
     width: 100%;
     border: 0;
@@ -68,20 +73,15 @@ button{
     padding:15px;
     border-radius: 3px;
     margin-top:15px;
-    }
+    transition: all 300ms;
+}
+
 
     a{
         color: #359b9b;
     }
 
-    button a{
-        color: white;    
-        text-transform: capitalize;
-        font-size: 20px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 300ms;
-    }
+
 
 a{
     margin-top: 4px;
@@ -115,10 +115,17 @@ a{
   }
 
   @media (max-width: 400px) {
+    
     .lateral2{
     width: 300px;}
    
     img{
         width: 300px;
     }
+  }
+
+  div.errores{
+    color: brown;
+    margin: 0px;
+    padding: 0px;
   }

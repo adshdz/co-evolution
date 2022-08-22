@@ -18,13 +18,14 @@
         <h1>Te damos la bienvenida: </h1>
     </div>
     <div class="lateral2">
-        <form action="/">
+        <div class="errores"><ul></ul></div>
+        <form action="/" class="formularioLogin">
             <label for="email"> Email: </label>    
-            <input type="text"  name="email">                
+            <input type="email"  name="email" class="emailForm" required>                
             <label for="Contraseña"> Contraseña: </label>    
-            <input type="text"  name="Contraseña">                
+            <input type="password"  name="Contraseña" class="passForm" required>                
             <a href="#"> Olvidaste tu Contraseña </a>
-            <button><a href="./loginBefore.html">Ingresar</a></button>
+            <input type="submit" value="enviar" class="submit">
             </form>
 
         <img src="./Public/Images/Logo.PNG" alt="">
@@ -32,6 +33,8 @@
         
     </div>
  </div>
+
+ <script src="./src/js/main.js"></script>
 
     
 </body>
