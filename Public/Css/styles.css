@@ -95,6 +95,7 @@ a{
 }
 
 @media (max-width: 1001px) {
+    
     .lateral1 {
       display: none;
     }
@@ -110,5 +111,14 @@ a{
 
     .terminos{
         margin: -60px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .lateral2{
+    width: 300px;}
+   
+    img{
+        width: 300px;
     }
   }
