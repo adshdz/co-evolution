@@ -1,13 +1,22 @@
 body{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
+
+@font-face {
+    font-family: "champagne";
+    src: url('../../font-family/Champagne\ &\ Limousines.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold\ Italic.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold\ Italic.ttf');
+}
+
 .main{
 background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);
     display: flex;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    font-family: "champagne";
     justify-self: center;
     width: 100%;
     margin: 0;
@@ -19,12 +28,12 @@ background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);
 .lateral1{
     line-height: 300px;
     width: 100%;
-    margin-left: 80px;
+    margin-left: 70px;
 }
 
 .lateral1 h1{
     color: antiquewhite;
-    font-size: 50px;
+    font-size: 80px;
        
 }
 

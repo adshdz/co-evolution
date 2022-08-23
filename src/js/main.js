@@ -15,7 +15,7 @@ datosForm.addEventListener("click", function(e){
         arrayErrores.push("El campo email esta vacio");
     }
     if(pass.value == ""){
-        arrayErrores.push("El campo pass esta vacio");
+        arrayErrores.push("El campo contraseña esta vacio");
     }
     if(arrayErrores.length>0){
         
@@ -36,7 +36,7 @@ email.addEventListener('input', function(e) {
         
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
       if (emailRegex.test(campo.value)) {
-      valido.innerText = "válido";
+      valido.innerText = " correo válido";
     } else {
       valido.innerText = "incorrecto";
     }
