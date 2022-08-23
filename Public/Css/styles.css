@@ -3,14 +3,17 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .main{
-    background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);
-        display: flex;
+background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);
+    display: flex;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    justify-self: center;
     width: 100%;
     margin: 0;
-    height: 750px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
 .lateral1{
@@ -49,7 +52,6 @@ label{
     margin-top: 2px;
     color: darkslategray;
     margin-bottom: 2px;
-    
 }
 
 input{
@@ -76,14 +78,8 @@ input.submit{
     transition: all 300ms;
 }
 
-
-    a{
-        color: #359b9b;
-    }
-
-
-
 a{
+    color: #359b9b;
     margin-top: 4px;
     text-decoration: none;
 }
@@ -116,11 +112,21 @@ a{
 
   @media (max-width: 400px) {
     
+    .main{
+        
+        color: #A8CF45 ;
+    }
+
     .lateral2{
-    width: 300px;}
+                border: solid #13989F;
+        
+        width: 300px;}
    
     img{
         width: 300px;
+    }
+    .terminos{
+        display: none;
     }
   }
 
