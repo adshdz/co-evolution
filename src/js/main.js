@@ -42,3 +42,16 @@ email.addEventListener('input', function (e) {
         valido.innerText = "incorrecto";
     }
 });
+
+passok
+
+pass.addEventListener('input', function (e) {
+    campo = e.target;
+    valido = document.getElementById('passok');
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (emailRegex.test(campo.value)) {
+        valido.innerText = " contraseña válida";
+    } else {
+        valido.innerText = "incorrecto";
+    }
+});
