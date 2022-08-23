@@ -91,7 +91,7 @@ a{
     color: #359b9b;
     margin-top: 4px;
     text-decoration: none;
-}
+    }
 
 .terminos{
     padding-bottom: 2px;
@@ -143,4 +143,13 @@ a{
     color: brown;
     margin: 0px;
     padding: 0px;
+  }
+
+  span{
+    color: #359b9b;
+    font-style: italic;
+  }
+
+  .oculto{
+    display: none;
   }

@@ -1,15 +1,12 @@
 
 const datosForm = document.querySelector("input.submit");
-
-
 const email = document.querySelector("input.emailForm");
 const parrafo = document.querySelector("div.errores ul")
 const pass  = document.querySelector("input.passForm");
 const arrayErrores = [];
 
-datosForm.addEventListener("click", function(e){
-    e.preventDefault();
-    
+datosForm.addEventListener("click", function(e){   
+   
 
     if(email.value == ""){
         arrayErrores.push("El campo email esta vacio");
@@ -18,17 +15,22 @@ datosForm.addEventListener("click", function(e){
         arrayErrores.push("El campo contraseña esta vacio");
     }
     if(arrayErrores.length>0){
-        
+        e.preventDefault();
         for( let i = 0; i<arrayErrores.length; i++){
-            parrafo.innerHTML += "<li>" + arrayErrores[i] + "</li>"
+            parrafo.innerHTML += `<li id ="remove${i}">${arrayErrores[i]}</li>`
+            
+            
         }
 
     }
 // se busca dejar en blanco los mensajes de errores
     setTimeout(()=>{
-    parrafo.outerHTML = "";
+        for( let i = 0; i<arrayErrores.length; i++){
+        document.getElementById("remove"+i).remove();
+        }
 }, 2000)
 });
+
 
 email.addEventListener('input', function(e) {
     campo = e.target;
