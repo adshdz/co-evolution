@@ -55,3 +55,7 @@ pass.addEventListener('input', function (e) {
         valido.innerText = "incorrecto";
     }
 });
+
+
+
+

@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "champagne";
+    src: url('../../font-family/Champagne\ &\ Limousines.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold\ Italic.ttf');
+    src: url('../../font-family/Champagne\ &\ Limousines\ Bold\ Italic.ttf');
+}
+
+
+/*ESTILOS GENERALES*/
+
+body{
+    background: #d1defa;
+    font-family: "champagne";
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.layout{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "nav nav nav nav"
+        "content content content lateral"
+        "footer footer footer footer"
+    ;
+    grid-template-rows:  70px auto 70px;
+    
+}
+
+
+
+.nav{
+    position: fixed;
+    width: 100%;
+
+    z-index: 1;
+    grid-area: nav;
+    background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);   
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav li{
+    padding: 10px;
+}
+
+.nav a {
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.nav a:hover{
+    transform: scale(1.1, 1.1);
+}
+
+/*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
+
+.content{
+    grid-area: content;
+    background: #f6f7f9;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.peli-item{
+    flex-grow: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.peli-item > h3{
+    font-size: 400;
+    font-weight: 400;
+}
+
+button,
+input[type="submit"],
+input[type="button"]{
+    color: white;    
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #F58634;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding:15px;
+    border-radius: 3px;
+    margin-top:15px;
+    transition: all 300ms;
+}
+
+/*ESTILOS BARRA LATERAL*/
+
+.lateral{
+    grid-area: lateral;
+    background: #f6f7f9;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+}
+
+.lateral > div{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+}
+
+.lateral input[type="text"],
+.lateral input[type="text"]
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f6f7f9;
+    color: #454545;
+    width: 80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+.edit_form{
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/*ESTILOS PARA EL PIE DE PÁGINA*/
+.footer{
+    grid-area: footer;
+    justify-content: flex-end;
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
+}
+
+.footer a{
+    color: #0b468a;
+    text-decoration: none;
+}
+
+@media (max-width: 1085px){
+    .content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .peli-item{
+        width: 80%;
+    }
+}
+
+
