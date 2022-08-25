@@ -22,6 +22,7 @@ datosForm.addEventListener("click", function (e) {
 });
 
 function remover(id) {
+    if (arrayErrores.length >= 0) {
     setTimeout(() => {
         for (let i = 0; i < arrayErrores.length; i++) {
             document.getElementById(id).remove();
@@ -29,7 +30,7 @@ function remover(id) {
         for (let i = 0; i <= arrayErrores.length; i++) {
             arrayErrores.pop();
         }
-    }, 2000)
+    }, 2000)}
 }
 
 email.addEventListener('input', function (e) {

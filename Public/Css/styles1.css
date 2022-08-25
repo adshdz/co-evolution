@@ -206,7 +206,6 @@ input[type="button"] {
     nav {
         display: flex;
         height: 67px;
-        align-items: flex-start;
                 
     }
 
