@@ -9,7 +9,7 @@
 
 /*ESTILOS GENERALES*/
 
-body{
+body {
     background: #d1defa;
     font-family: "champagne";
     text-align: center;
@@ -17,7 +17,7 @@ body{
     margin: 0px;
 }
 
-.layout{
+.layout {
     width: 100%;
     height: auto;
     display: grid;
@@ -26,29 +26,28 @@ body{
         "content content content lateral"
         "footer footer footer footer"
     ;
-    grid-template-rows:  70px auto 70px;
-    
+    grid-template-rows: 70px auto 70px;
+
 }
 
 
 
-.nav{
+.nav {
+    z-index: 1;
     position: fixed;
     width: 100%;
-
-    z-index: 1;
     grid-area: nav;
-    background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);   
+    background: linear-gradient(90deg, #A8CF45 10%, #13989F 100%);
 }
 
-.nav > ul {
+.nav>ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
 
-.nav li{
+.nav li {
     padding: 10px;
 }
 
@@ -64,13 +63,13 @@ body{
     transition: all 300ms;
 }
 
-.nav a:hover{
+.nav a:hover {
     transform: scale(1.1, 1.1);
 }
 
 /*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
 
-.content{
+.content {
     grid-area: content;
     background: #f6f7f9;
 
@@ -81,7 +80,7 @@ body{
     flex-grow: 1;
 }
 
-.peli-item{
+.peli-item {
     flex-grow: 1;
     background: white;
     border-radius: 10px;
@@ -93,15 +92,15 @@ body{
     padding-right: 25px;
 }
 
-.peli-item > h3{
+.peli-item>h3 {
     font-size: 400;
     font-weight: 400;
 }
 
 button,
 input[type="submit"],
-input[type="button"]{
-    color: white;    
+input[type="button"] {
+    color: white;
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 500;
@@ -110,22 +109,22 @@ input[type="button"]{
     width: 100%;
     border: 0;
     outline: 0;
-    padding:15px;
+    padding: 15px;
     border-radius: 3px;
-    margin-top:15px;
+    margin-top: 15px;
     transition: all 300ms;
 }
 
 /*ESTILOS BARRA LATERAL*/
 
-.lateral{
+.lateral {
     grid-area: lateral;
     background: #f6f7f9;
     border-left: 1px solid #ddd;
     padding: 20px;
 }
 
-.lateral > div{
+.lateral>div {
     box-sizing: border-box;
     width: 90%;
     margin: 20px;
@@ -137,8 +136,7 @@ input[type="button"]{
 }
 
 .lateral input[type="text"],
-.lateral input[type="text"]
-{
+.lateral input[type="text"] {
     display: block;
     margin: 0 auto;
     margin-top: 15px;
@@ -152,13 +150,13 @@ input[type="button"]{
     border-color: transparent;
 }
 
-.edit_form{
+.edit_form {
     border-top: 1px solid #ddd;
     margin-top: 10px;
 }
 
 /*ESTILOS PARA EL PIE DE PÁGINA*/
-.footer{
+.footer {
     grid-area: footer;
     justify-content: flex-end;
     background: #d1defa;
@@ -169,21 +167,58 @@ input[type="button"]{
     padding-left: 25px;
 }
 
-.footer a{
+.footer a {
     color: #0b468a;
     text-decoration: none;
 }
 
-@media (max-width: 1085px){
+.hamburguer-button {
+    display: none;
+}
+
+@media (max-width: 1085px) {
     .content {
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
     }
 
-    .peli-item{
+    .peli-item {
         width: 80%;
     }
 }
 
+@media (max-width: 750px) {
 
+    nav>ul>li {
+        display: none;
+    }
+
+    .hamburguer-button {
+        display: block;
+        margin-left: 30px;
+        margin-top: 20px;
+        width: 60px;
+        size: 400px;
+        color: #F58634;
+    }
+
+    nav {
+        display: flex;
+        height: 67px;
+        align-items: flex-start;
+                
+    }
+
+    .search,
+    .add {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .lateral{
+        z-index: -1;
+    }
+
+}
